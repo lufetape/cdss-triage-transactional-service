@@ -1,0 +1,36 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# An example controller showing a sample home page
+
+GET     /hec-requests/get/:id   api.service.HECRequestResource.get(id: Long)
+
+GET     /hec-requests/list      api.service.HECRequestResource.list()
+
+POST    /hec-requests/add       api.service.HECRequestResource.insert()
+
+
+GET     /ehr-requests/get/:id   api.service.EHRRequestResource.get(id: Long)
+
+GET     /ehr-requests/list      api.service.EHRRequestResource.list()
+
+POST    /ehr-requests/add       api.service.EHRRequestResource.insert()
+
+
+GET     /inference-requests/get/:id   api.service.InferenceRequestResource.get(id: Long)
+
+GET     /inference-requests/list      api.service.InferenceRequestResource.list()
+
+POST    /inference-requests/add       api.service.InferenceRequestResource.insert()
+
+
+# Routes for Triage Requests:
+
+GET     /triage-requests      	api.service.TriageRequestResource.list()
+
+GET     /triage-requests/:id   	api.service.TriageRequestResource.get(id: Long)
+
+POST    /triage-requests		api.service.TriageRequestResource.insert()
+
+DELETE	/triage-requests/:id	api.service.TriageRequestResource.delete(id: Long)
