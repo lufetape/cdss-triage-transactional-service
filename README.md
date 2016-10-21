@@ -7,10 +7,10 @@ Install Play Framework in your local environment. See [Installing Play Framework
 
 ## Installation
 
-´´´
+```
 cd PROJECT_HOME
 activator
 compile
 run
 Open a Browser with http://localhost:9000
-´´´
+```
