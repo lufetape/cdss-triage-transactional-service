@@ -85,6 +85,8 @@ public class Module extends AbstractModule {
     	bind(ITriageRequestResourceMapper.class).to(TriageRequestResourceMapper.class);
     	bind(ITriageRequestServiceMapper.class).to(TriageRequestServiceMapper.class);
     	
+    	//prueba git jhonatan
+    	
         
     }
 
