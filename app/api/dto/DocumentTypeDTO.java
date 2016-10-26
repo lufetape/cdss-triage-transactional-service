@@ -1,16 +1,12 @@
-package businesslogic.bo;
+package api.dto;
 
 import java.io.Serializable;
 
-public class RequestStatusBO implements Serializable {
+public class DocumentTypeDTO implements Serializable {
 
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = -2137262893726412674L;
-
+	private static final long serialVersionUID = -8379564916009413174L;
+	
 	private Long id;
-
 	private String description;
 
 	public Long getId() {
@@ -45,7 +41,7 @@ public class RequestStatusBO implements Serializable {
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		RequestStatusBO other = (RequestStatusBO) obj;
+		DocumentTypeDTO other = (DocumentTypeDTO) obj;
 		if (id == null) {
 			if (other.id != null)
 				return false;
@@ -56,9 +52,7 @@ public class RequestStatusBO implements Serializable {
 
 	@Override
 	public String toString() {
-		return "RequestStatusBO [id=" + id + ", description=" + description + "]";
+		return "DocumentTypeDTO [id=" + id + ", description=" + description + "]";
 	}
-	
-	
 
 }

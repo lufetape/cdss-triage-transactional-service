@@ -2,12 +2,14 @@ package businesslogic.bo;
 
 import java.io.Serializable;
 
-public class RequestStatusBO implements Serializable {
+public class DocumentTypeBO implements Serializable{
+
+
 
 	/**
 	 * 
 	 */
-	private static final long serialVersionUID = -2137262893726412674L;
+	private static final long serialVersionUID = 2955285281607328766L;
 
 	private Long id;
 
@@ -45,7 +47,7 @@ public class RequestStatusBO implements Serializable {
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		RequestStatusBO other = (RequestStatusBO) obj;
+		DocumentTypeBO other = (DocumentTypeBO) obj;
 		if (id == null) {
 			if (other.id != null)
 				return false;
@@ -56,9 +58,7 @@ public class RequestStatusBO implements Serializable {
 
 	@Override
 	public String toString() {
-		return "RequestStatusBO [id=" + id + ", description=" + description + "]";
+		return "DocumentTypeBO [id=" + id + ", description=" + description + "]";
 	}
-	
-	
 
 }

@@ -1,10 +1,12 @@
 import com.google.inject.AbstractModule;
 
+import api.mapper.IDocumentTypeResourceMapper;
 import api.mapper.IEHRRequestResourceMapper;
 import api.mapper.IHECRequestResourceMapper;
 import api.mapper.IInferenceRequestResourceMapper;
 import api.mapper.IRequestStatusResourceMapper;
 import api.mapper.ITriageRequestResourceMapper;
+import api.mapper.impl.DocumentTypeResourceMapper;
 import api.mapper.impl.EHRRequestResourceMapper;
 import api.mapper.impl.HECRequestResourceMapper;
 import api.mapper.impl.InferenceRequestResourceMapper;
@@ -18,19 +20,25 @@ import dao.service.IHECRequestDAO;
 import dao.service.IInferenceRequestDAO;
 import dao.service.impl.HECRequestDAO;
 import dao.service.impl.InferenceRequestDAO;
+import businesslogic.mapper.IDocumentTypeServiceMapper;
 import businesslogic.mapper.IEHRRequestServiceMapper;
 import businesslogic.mapper.IHECRequestServiceMapper;
 import businesslogic.mapper.IInferenceRequestServiceMapper;
 import businesslogic.mapper.IRequestStatusServiceMapper;
 import businesslogic.mapper.ITriageRequestServiceMapper;
+import businesslogic.mapper.impl.DocumentTypeServiceMapper;
 import businesslogic.mapper.impl.EHRRequestServiceMapper;
 import businesslogic.mapper.impl.HECRequestServiceMapper;
 import businesslogic.mapper.impl.InferenceRequestServiceMapper;
 import businesslogic.mapper.impl.RequestStatusServiceMapper;
 import businesslogic.mapper.impl.TriageRequestServiceMapper;
+import businesslogic.service.IDocumentTypeService;
 import businesslogic.service.IEHRRequestService;
+import businesslogic.service.impl.DocumentTypeService;
 import businesslogic.service.impl.EHRRequestService;
+import dao.service.IDocumentTypeDAO;
 import dao.service.IEHRRequestDAO;
+import dao.service.impl.DocumentTypeDAO;
 import dao.service.impl.EHRRequestDAO;
 import businesslogic.service.IRequestStatusService;
 import businesslogic.service.ITriageRequestService;
@@ -64,6 +72,11 @@ public class Module extends AbstractModule {
     	bind(IRequestStatusDAO.class).to(RequestStatusDAO.class);
     	bind(IRequestStatusResourceMapper.class).to(RequestStatusResourceMapper.class);
     	bind(IRequestStatusServiceMapper.class).to(RequestStatusServiceMapper.class);
+    	
+    	bind(IDocumentTypeService.class).to(DocumentTypeService.class);
+    	bind(IDocumentTypeDAO.class).to(DocumentTypeDAO.class);
+    	bind(IDocumentTypeResourceMapper.class).to(DocumentTypeResourceMapper.class);
+    	bind(IDocumentTypeServiceMapper.class).to(DocumentTypeServiceMapper.class);
     	    	
     	bind(IHECRequestService.class).to(HECRequestService.class);
     	bind(IHECRequestDAO.class).to(HECRequestDAO.class);
@@ -84,8 +97,6 @@ public class Module extends AbstractModule {
     	bind(ITriageRequestDAO.class).to(TriageRequestDAO.class);
     	bind(ITriageRequestResourceMapper.class).to(TriageRequestResourceMapper.class);
     	bind(ITriageRequestServiceMapper.class).to(TriageRequestServiceMapper.class);
-    	
-    	//prueba git jhonatan
     	
         
     }
