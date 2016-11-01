@@ -4,32 +4,40 @@ import api.mapper.IDocumentTypeResourceMapper;
 import api.mapper.IEHRRequestResourceMapper;
 import api.mapper.IHECRequestResourceMapper;
 import api.mapper.IInferenceRequestResourceMapper;
+import api.mapper.IPatientResourceMapper;
 import api.mapper.IRequestStatusResourceMapper;
 import api.mapper.ITriageRequestResourceMapper;
 import api.mapper.impl.DocumentTypeResourceMapper;
 import api.mapper.impl.EHRRequestResourceMapper;
 import api.mapper.impl.HECRequestResourceMapper;
 import api.mapper.impl.InferenceRequestResourceMapper;
+import api.mapper.impl.PatientResourceMapper;
 import api.mapper.impl.RequestStatusResourceMapper;
 import api.mapper.impl.TriageRequestResourceMapper;
 import businesslogic.service.IHECRequestService;
 import businesslogic.service.IInferenceRequestService;
+import businesslogic.service.IPatientService;
 import businesslogic.service.impl.HECRequestService;
 import businesslogic.service.impl.InferenceRequestService;
+import businesslogic.service.impl.PatientService;
 import dao.service.IHECRequestDAO;
 import dao.service.IInferenceRequestDAO;
+import dao.service.IPatientDAO;
 import dao.service.impl.HECRequestDAO;
 import dao.service.impl.InferenceRequestDAO;
+import dao.service.impl.PatientDAO;
 import businesslogic.mapper.IDocumentTypeServiceMapper;
 import businesslogic.mapper.IEHRRequestServiceMapper;
 import businesslogic.mapper.IHECRequestServiceMapper;
 import businesslogic.mapper.IInferenceRequestServiceMapper;
+import businesslogic.mapper.IPatientServiceMapper;
 import businesslogic.mapper.IRequestStatusServiceMapper;
 import businesslogic.mapper.ITriageRequestServiceMapper;
 import businesslogic.mapper.impl.DocumentTypeServiceMapper;
 import businesslogic.mapper.impl.EHRRequestServiceMapper;
 import businesslogic.mapper.impl.HECRequestServiceMapper;
 import businesslogic.mapper.impl.InferenceRequestServiceMapper;
+import businesslogic.mapper.impl.PatientServiceMapper;
 import businesslogic.mapper.impl.RequestStatusServiceMapper;
 import businesslogic.mapper.impl.TriageRequestServiceMapper;
 import businesslogic.service.IDocumentTypeService;
@@ -97,6 +105,11 @@ public class Module extends AbstractModule {
     	bind(ITriageRequestDAO.class).to(TriageRequestDAO.class);
     	bind(ITriageRequestResourceMapper.class).to(TriageRequestResourceMapper.class);
     	bind(ITriageRequestServiceMapper.class).to(TriageRequestServiceMapper.class);
+    	
+    	bind(IPatientService.class).to(PatientService.class);
+    	bind(IPatientDAO.class).to(PatientDAO.class);
+    	bind(IPatientResourceMapper.class).to(PatientResourceMapper.class);
+    	bind(IPatientServiceMapper.class).to(PatientServiceMapper.class);
     	
         
     }

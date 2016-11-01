@@ -25,12 +25,15 @@ GET     /inference-requests/list      api.service.InferenceRequestResource.list(
 POST    /inference-requests/add       api.service.InferenceRequestResource.insert()
 
 
-# Routes for Triage Requests:
+GET     /triage-requests/get/:id   api.service.TriageRequestResource.get(id: Long)
 
-GET     /triage-requests      	api.service.TriageRequestResource.list()
+GET     /triage-requests/list      api.service.TriageRequestResource.list()
 
-GET     /triage-requests/:id   	api.service.TriageRequestResource.get(id: Long)
+POST    /triage-requests/add       api.service.TriageRequestResource.insert()
 
-POST    /triage-requests		api.service.TriageRequestResource.insert()
 
-DELETE	/triage-requests/:id	api.service.TriageRequestResource.delete(id: Long)
+GET     /patients/get/:id   api.service.PatientResource.get(id: Long)
+
+GET     /patients/list      api.service.PatientResource.list()
+
+POST    /patients/add       api.service.PatientResource.insert()
